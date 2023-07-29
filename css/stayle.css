@@ -1,0 +1,191 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+a,
+button {
+    background-color: inherit;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    border: none;
+}
+
+.container {
+    max-width: 1410px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.netevia-section__button {
+    border-radius: 39px;
+    background: linear-gradient(226deg, #56C3F2 0%, #3EC9B0 100%);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 19px 52px;
+}
+
+.netevia-section__title {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 104.7%;
+    text-transform: capitalize;
+    max-width: 599px;
+}
+
+.netevia-section__text {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 599px;
+
+}
+
+/* Header series */
+.header-wrap {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.header-button {
+    border-radius: 39px;
+    background: linear-gradient(226deg, #56C3F2 0%, #3EC9B0 100%);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 14px 36px;
+    cursor: pointer;
+}
+
+/* main-section */
+.main-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.main-wrap__left {
+    background-image: url(../image/main-img-left.png);
+    width: 880vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 16px;
+}
+
+.main-left__card h1 {
+    padding-top: 40px;
+}
+
+.main-left__card p {
+    padding: 20px 0 45px 0;
+}
+
+.main-left__card {
+    padding: 96px 0 60px 69px;
+}
+
+.main-wrap__right {
+    background-image: url(../image/main-img-right.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 527vw;
+    border-radius: 16px;
+}
+
+.main-card__title {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 104.7%;
+    text-transform: capitalize;
+    padding: 0 0 28px 32px;
+}
+
+.main-right__card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 386px;
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#timer>div {
+    border-radius: 12px;
+    border: 1px solid #787C9D;
+    background: rgba(114, 199, 240, 0.19);
+    backdrop-filter: blur(13.5px);
+    display: inline-block;
+    padding: 16px 15px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 104.7%;
+    text-transform: capitalize;
+}
+
+#timer>div span {
+    color: #E4E4E4;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* Footer */
+.footer{
+    padding-bottom: 200px;
+}
+.footer .footer-warp {
+    display: flex;
+    margin-top: 20px;
+    padding: 40px 60px;
+    border-radius: 16px;
+    background: #161E2C;
+    align-items: center;
+}
+
+.footer .footer-shoshial__linl {
+    display: flex;
+    gap: 40px;
+    padding: 0 280px 0 436px;
+}
+
+.footer .footer-info {
+    color: #787C9D;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
