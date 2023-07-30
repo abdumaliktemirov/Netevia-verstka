@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.css" />
     <link rel="stylesheet" href="./css/stayle.css">
     <title>Netevia</title>
 </head>
@@ -25,7 +27,6 @@
         </header>
         <!-- Header -->
 
-
         <main>
             <section class="main-section">
                 <div class="container">
@@ -37,13 +38,10 @@
                                 </a>
                                 <h1 class="netevia-section__title">Netevia partner Conference 2023</h1>
                                 <p class="netevia-section__text">Join us for the Netevia 1st Partner Conference in
-                                    Miami,
-                                    October 9-10th At this event
-                                    you'll learn about recent advancements within payment technologies and connect with
-                                    other like-minded leaders while experiencing some of the premium cuisine &
-                                    entertainment
-                                    available around town!</p>
-                                <a class="netevia-section__button" href="#!"> Register now </a>
+                                    Miami, October 9-10th At this event you'll learn about recent advancements within
+                                    payment technologies and connect with other like-minded leaders while experiencing
+                                    some of the premium cuisine & entertainment available around town!</p>
+                                <a class="netevia-section__button register__now" href="#!">Register now </a>
                             </div>
                         </div>
                         <div class="main-wrap__right">
@@ -61,7 +59,113 @@
                 </div>
             </section>
 
-            <section class="advertising-card"></section>
+            <section class="card-panel">
+                <div class="container">
+                    <div class="card-panel__warpper card-background__top">
+                        <div class="card-panel__info">
+                            <span>Where</span>
+                            <h2 class="netevia-section__title">The Guitar Hotel</h2>
+                            <p class="netevia-section__text">Hotel booking coming soon.</p>
+                            <a class="netevia-section__button register__now" href="#!">Register now</a>
+                        </div>
+                    </div>
+                    <div class="card-panel__warpper card-background__bottom">
+                        <div class="card-panel__info">
+                            <span>Program</span>
+                            <h2 class="netevia-section__title">Schedule is TBA</h2>
+                            <p class="netevia-section__text">RSVP to keep up to date with the schedule.</p>
+                            <a class="netevia-section__button register__now" href="#!">Register now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-bottom">
+                <div class="container">
+                    <div class="card-data__wrap">
+                        <div class="card-data__info">
+                            <div class="card-info__nav">
+                                <h2 class="netevia-section__title">How it was last year</h2>
+                                <a class="netevia-section__button card-right" href="#!"><span>More photos</span>
+                                    <img src="./image/card-data-icon.svg" alt=""></a>
+                            </div>
+                            <p class="netevia-section__text ">We had a blast bringing together industry stars, tech
+                                geniuses, and banking gurus for a
+                                thrilling blend of insights, innovation, and non-stop fun.</p>
+                        </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-4.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-3.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./image/swiper-img-4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="card-input">
+                <div class="card-input__it">
+                    <span class="card-input__x">
+                        <img src="./image/input-x.svg" alt="">
+                    </span>
+                    <h3>Register now</h3>
+                    <form action="" class="card-input__form">
+                        <div class="input-wrap">
+                            <span>Full Name*</span>
+                            <label for="text-name"></label>
+                            <input type="text" placeholder="Enter full name">
+                        </div>
+                        <div class="input-wrap">
+                            <span>Email Address*</span>
+                            <label for="text-name"></label>
+                            <input type="text" placeholder="Enter full name">
+                        </div>
+
+                        <div class="input-wrap">
+                            <span>Company Name*</span>
+                            <label for="text-name"></label>
+                            <input type="text" placeholder="Enter full name">
+                        </div>
+                    </form>
+                    <a class="netevia-section__button" href="#!">Register now</a>
+                </div>
+            </div>
+
+            <div class="card-input__next">
+                <div class="card-input__it">
+                    <span class="card-input__x">
+                        <img src="./image/input-x.svg" alt="">
+                    </span>
+                    <div class="card-next__bottom">
+                        <img src="./image/input-2-sps.svg" alt="">
+                        <h3>Thank you!</h3>
+                        <span>You will receive an email with information about the event.</span>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->
@@ -91,8 +195,12 @@
             </div>
         </footer>
         <!-- Footer -->
+
     </div>
     <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/map.js"></script>
 </body>
