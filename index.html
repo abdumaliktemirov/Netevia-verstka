@@ -47,7 +47,7 @@
                         <div class="main-wrap__right">
                             <div class="main-right__card">
                                 <h1 class="main-card__title">October 9-10</h1>
-                                <div id="timer">
+                                <div id="swiper_time">
                                     <div class="salom" id="days"></div>
                                     <div id="hours"></div>
                                     <div id="minutes"></div>
@@ -150,7 +150,22 @@
                             <input type="text" placeholder="Enter full name">
                         </div>
                     </form>
-                    <a class="netevia-section__button" href="#!">Register now</a>
+                    <div class="card-input__waiting">
+                        <a class="netevia-section__button loading__button " href="#!">please wait</a>
+                        <a class="netevia-section__button register__button  card-input__active" href="#!">Register now</a>
+                        <div class="spinner button-waiting">
+                            <div></div>   
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                            <div></div>    
+                          </div>
+                    </div>
                 </div>
             </div>
 
@@ -188,7 +203,7 @@
                             <img src="./image/Twitter.svg" alt="">
                         </a>
                     </div>
-                    <div>
+                    <div class="footer-info__end">
                         <span class="footer-info">Netevia Pay. Copyright © 2023. All Rights Reserved</span>
                     </div>
                 </div>
@@ -196,10 +211,10 @@
         </footer>
         <!-- Footer -->
 
+
     </div>
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/map.js"></script>

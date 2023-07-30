@@ -9,7 +9,6 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    padding-bottom: 100px;
 }
 
 a,
@@ -20,6 +19,7 @@ button {
     list-style: none;
     color: inherit;
     border: none;
+    outline: none;
 }
 
 .container {
@@ -37,6 +37,12 @@ button {
     line-height: normal;
     text-transform: capitalize;
     padding: 19px 52px;
+    transition: 0.4s;
+}
+
+.netevia-section__button:hover {
+    background: linear-gradient(90deg, #56C3F2 0%, #3EC9B0 100%);
+
 }
 
 .netevia-section__title {
@@ -79,6 +85,10 @@ button {
     cursor: pointer;
 }
 
+.header .header-button:hover {
+    background: linear-gradient(90deg, #56C3F2 0%, #3EC9B0 100%);
+}
+
 /* main-section */
 .main-section .main-wrap {
     display: flex;
@@ -88,7 +98,7 @@ button {
 
 .main-section .main-wrap__left {
     background-image: url(../image/main-img-left.png);
-    width: 880vw;
+    width: 880px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 16px;
@@ -110,7 +120,7 @@ button {
     background-image: url(../image/main-img-right.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 527vw;
+    width: 527px;
     border-radius: 16px;
 }
 
@@ -129,7 +139,7 @@ button {
     padding-top: 386px;
 }
 
-#timer {
+#swiper_time {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -137,7 +147,7 @@ button {
     padding-bottom: 60px;
 }
 
-#timer>div {
+#swiper_time>div {
     border-radius: 12px;
     border: 1px solid #787C9D;
     background: rgba(114, 199, 240, 0.19);
@@ -155,7 +165,7 @@ button {
     text-transform: capitalize;
 }
 
-#timer>div span {
+#swiper_time>div span {
     color: #E4E4E4;
     text-align: center;
     font-size: 16px;
@@ -298,7 +308,7 @@ button {
 }
 
 .card-input__active {
-    display: flex;
+    display: flex !important;
 }
 
 .card-input__it {
@@ -328,16 +338,18 @@ button {
 }
 
 .card-input__x {
-    top: 10%;
-    right: 10%;
+    top: 5%;
+    right: 4%;
     cursor: pointer;
     position: absolute;
 }
 
 .card-input__it a {
-    width: 232px;
+    width: 245px;
     height: 64px;
     margin-top: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .card-input__next {
@@ -375,13 +387,121 @@ button {
     padding-bottom: 20px;
 }
 
+.card-input .loading__button,
+.card-input .register__button {
+    display: none;
+}
+
+.card-input__waiting {
+    position: relative;
+}
+
+.button-waiting {
+    position: absolute;
+    left: 26%;
+    top: 56%;
+}
+
+/* wating card */
+.spinner {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.spinner div {
+    position: absolute;
+    width: 50%;
+    height: 150%;
+    background: #fff;
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+    animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+}
+
+.spinner div:nth-child(1) {
+    --delay: 0.1;
+    --rotation: 36;
+    --translation: 150;
+}
+
+.spinner div:nth-child(2) {
+    --delay: 0.2;
+    --rotation: 72;
+    --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+    --delay: 0.3;
+    --rotation: 108;
+    --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+    --delay: 0.4;
+    --rotation: 144;
+    --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+    --delay: 0.5;
+    --rotation: 180;
+    --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+    --delay: 0.6;
+    --rotation: 216;
+    --translation: 150;
+}
+
+.spinner div:nth-child(7) {
+    --delay: 0.7;
+    --rotation: 252;
+    --translation: 150;
+}
+
+.spinner div:nth-child(8) {
+    --delay: 0.8;
+    --rotation: 288;
+    --translation: 150;
+}
+
+.spinner div:nth-child(9) {
+    --delay: 0.9;
+    --rotation: 324;
+    --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+    --delay: 1;
+    --rotation: 360;
+    --translation: 150;
+}
+
+@keyframes spinner-fzua35 {
+
+    0%,
+    10%,
+    20%,
+    30%,
+    50%,
+    60%,
+    70%,
+    80%,
+    90%,
+    100% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+    }
+
+    50% {
+        transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+    }
+}
+
+/* wating card*/
 /* input series */
 
 /* Footer */
-.footer {
-    padding-bottom: 200px;
-}
-
 .footer .footer-warp {
     display: flex;
     margin-top: 20px;
@@ -397,6 +517,10 @@ button {
     padding: 0 280px 0 436px;
 }
 
+.footer .footer-info__end {
+    width: 282px;
+}
+
 .footer .footer-info {
     font-size: 12px;
     font-weight: 400;
@@ -405,9 +529,247 @@ button {
     line-height: normal;
 }
 
-
 /* Media  */
+@media (max-width:1400px) {
+    .footer .footer-warp {
+        display: flex;
+        justify-content: space-between;
+    }
 
-@media (max-width:1425px){
-   
+    .footer .footer-shoshial__linl {
+        padding: 0px 210px 0 370px;
+    }
+}
+
+@media (max-width:1272px) {
+    .footer .footer-shoshial__linl {
+        padding: 0px 110px 0 190px;
+    }
+}
+
+@media (max-width:1000px) {
+    .main-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .swiper-slide img {
+        height: auto;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .main-section .main-wrap__right {
+        width: 100%;
+    }
+
+    .main-section .main-wrap__left {
+        width: 100%;
+    }
+
+    .main-section .main-card__title {
+        text-align: center;
+        font-size: 52px;
+    }
+
+    .main-section .main-right__card {
+        padding: 154px 0 154px 0;
+        height: 660px;
+    }
+
+    .card-bottom {
+        padding: 0 15px;
+    }
+
+    .netevia-section__title {
+        font-size: 52px;
+    }
+
+    .netevia-section__button {
+        font-size: 16px;
+        padding: 14px 38px
+    }
+
+    .netevia-section__text {
+        max-width: 440px;
+    }
+
+    .card-panel .card-panel__warpper {
+        margin: 20px 12px;
+    }
+
+    .footer .footer-warp {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        border-radius: 0;
+    }
+
+    .footer .footer-shoshial__linl {
+        padding: 0;
+    }
+
+    .card-input__it {
+        width: 588px;
+        height: 530px;
+        border-radius: 20px;
+    }
+
+    .card-input__it h3 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width:700px) {
+    .main-wrap__left img {
+        width: 330px;
+    }
+
+    .netevia-section__title {
+        font-size: 33px !important;
+    }
+
+    .netevia-section__text {
+        font-size: 13px;
+        max-width: 500px;
+    }
+
+    .netevia-section__button {
+        font-size: 15px;
+        padding: 13px 33px;
+
+    }
+
+    .header .header-button {
+        font-size: 10px;
+    }
+
+    .header-logo img {
+        width: 80px;
+    }
+
+    .header .header-wrap {
+        padding-bottom: 0;
+    }
+
+    .main-section .main-right__card {
+        padding: 110px 0 154px 0;
+        height: 580px;
+    }
+
+    .card-panel .card-panel__info h2 {
+        margin-bottom: 4px;
+    }
+
+    .card-panel .card-panel__info p {
+        margin-bottom: 20px;
+    }
+
+    .footer .footer-info {
+        font-weight: 11px !important;
+    }
+
+    .footer .footer-warp span {
+        width: 20px;
+        font-size: 15px;
+    }
+
+    .footer .footer-shoshial__linl {
+        gap: 20px;
+    }
+
+    .card-panel .card-panel__warpper {
+        padding: 40px;
+    }
+
+    .card-input__it h3 {
+        font-size: 50px;
+    }
+
+    .input-wrap input {
+        width: 300px;
+    }
+
+    .card-input__it {
+        width: 420px;
+    }
+
+    .card-input__x {
+        top: 3%;
+        right: 6%;
+    }
+}
+
+@media (max-width:738px) {
+    .netevia-section__title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width:540px) {
+    .main-section .main-left__card {
+        padding: 40px;
+    }
+
+    .netevia-section__title {
+        font-size: 30px !important;
+    }
+
+    #swiper_time {
+        flex-wrap: wrap;
+    }
+
+    .main-wrap__left img {
+        width: 240px;
+    }
+
+    .main-section .main-card__title {
+        font-size: 36px;
+    }
+
+    .netevia-section__button {
+        font-size: 10px !important;
+        padding: 10px 16px !important;
+    }
+
+    netevia-section__button card-right img {
+        width: 16px;
+    }
+
+    .netevia-section__text {
+        line-height: 19px;
+        max-width: 300px;
+    }
+
+    .card-bottom .card-info__nav h2 {
+        width: 180px;
+        font-size: 26px !important;
+    }
+
+    .footer .footer-info__end {
+        width: 200px;
+    }
+
+    .card-input__it h3 {
+        font-size: 36px;
+    }
+
+    .input-wrap input {
+        width: 200px;
+    }
+
+    .card-input__it a {
+        width: 105px;
+        height: 32px;
+    }
+
+    .card-input__it {
+        width: 320px;
+    }
+
 }

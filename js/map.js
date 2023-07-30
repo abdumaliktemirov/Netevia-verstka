@@ -1,4 +1,4 @@
-function makeTimer() {
+function makeSwiper_time() {
 
     var endTime = new Date("10 Octember 2023 1:00:00 GMT+02:00");
     endTime = (Date.parse(endTime) / 1000);
@@ -24,7 +24,7 @@ function makeTimer() {
 
 }
 
-setInterval(function () { makeTimer(); }, 1000);
+setInterval(function () { makeSwiper_time(); }, 1000);
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -62,11 +62,12 @@ swiper_container.onmouseleave = () => {
 
 
 let register = document.querySelectorAll('.register__now');
+let wait_input = document.querySelector('.loading__button');
 let card_input = document.querySelector('.card-input');
 let close_card_input = card_input.querySelector('.card-input__x');
-let register_btn = card_input.querySelector('.netevia-section__button');
+let register_btn = card_input.querySelector('.register__button');
 let card_input_next = document.querySelector('.card-input__next');
-let close_card_input_next = card_input_next.querySelector('.card-input__x');
+let register__button = card_input_next.querySelector('.card-input__x');
 
 if (register.length > 0) {
     register.forEach(item => {
@@ -80,11 +81,12 @@ if (register.length > 0) {
     }
 
     register_btn.onclick = () => {
-        card_input.classList.remove('card-input__active');
-        card_input_next.classList.add('card-input__next__active');
+        register_btn.classList.remove('card-input__active');
+        wait_input.classList.add('card-input__active');
+        setTimeout(() => {card_input_next.classList.add('card-input__next__active');}, 1000);
     }
 
-    close_card_input_next.onclick = () => {
+    register__button.onclick = () => {
         card_input_next.classList.remove('card-input__next__active');
     }
 }
